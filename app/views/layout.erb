@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>goDOgood</title>
+    <link rel="stylesheet" href="/css/normalize.css" media="screen">
+    <link rel="stylesheet" href="/css/application.css" media="screen">
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="/" class="logo-link">goDOgood</a>
+
+        <ul class="nested nav">
+          <% if logged_in? %>
+          <li><a href="/">Home</a></li>
+          <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
+          <li><input type="hidden" name="_method" value="delete">
+          <input type="submit" class="logout small-btn" value="Logout"></li>
+          <% else %>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/users/new" class="new small-btn">Sign Up</a></li>
+          <li><a href="/login" class="login small-btn">Login</a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
