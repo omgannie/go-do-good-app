@@ -1,0 +1,17 @@
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <div class="error"><%= error %></div>
+  <% end %>
+<% end %>
+
+<h1>Login to Your Account</h1>
+
+<form action="/users" method="get">
+  <label>Username</label>
+  <input type="text" name="user[username]" placeholder="e.g. 'janedoe123'">
+
+  <label>Password</label>
+  <input type="password" name="user[password]" placeholder="•••••••••">
+
+  <input type="submit" value="Login">
+</form>
