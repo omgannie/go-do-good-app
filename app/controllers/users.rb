@@ -16,8 +16,8 @@ post '/users' do
   end
 end
 
-get '/users/login' do
-  erb :'/users/login'
+get '/login' do
+  erb :login
 end
 
 # authenticating an existing user
@@ -32,7 +32,7 @@ get '/users' do
     erb :'/users/show'
   else
     @errors = ["Something wasn't right. Try again."]
-    erb :'/users/login'
+    erb :login
   end
 end
 
