@@ -1,0 +1,16 @@
+<% if @all_programs %>
+<ul>
+  <% @all_programs.each do |program| %>
+  <li class="programTab">
+    <h2><%= program.name %></h2>
+    <h3><%= program.organization %></h3>
+
+    <p>
+      
+    </p>
+  </li>
+  <% end %>
+</ul>
+<% else %>
+
+<% end %>

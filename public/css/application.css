@@ -10,18 +10,6 @@ body {
   margin: 0 auto;
 }
 
-a:link {
-  color: #F5E3E0;
-  border: none;
-}
-
-.nav-wrapper {
-  background-color: #8A4F7D;
-  width: 100%;
-  margin: 0;
-  overflow: auto;
-  padding: 20px;
-}
 
 .logo-link {
   font-size: 1.5em;

@@ -37,9 +37,12 @@ get '/users' do
 end
 
 get '/users/:id' do
-  @user = User.find(params[:id])
-
-  erb :'/users/show'
+  if logged_in?
+    @user = User.find(params[:id])
+    erb :'/users/show'
+  else
+    erb :index
+  end
 end
 
 delete '/logout' do
