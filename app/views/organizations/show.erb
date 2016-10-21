@@ -1,17 +1,28 @@
-<% if @organization %>
-  <h1><%= @organization.name %></h1>
+<h3>Find Places to DOgood</h3>
+<div id="map">
+  <script src="/js/gmaps.js"></script>
+</div>
 
-  <div class="org-desc">
-    <p>
-      <%= @organization.location %>
-    </p>
-  </div>
-<% else %>
-  <h1>Sorry, this organization is not currently in our system!</h1>
-  <p>
-    Why not try adding it yourself?
-  </p>
-  <form class="add main-btn" action="/organizations" method="get">
-    <input type="submit" value="Add New Organization">
-  </form>
-<% end %>
+<P>
+<table>
+  <thead>
+    <tr>
+      <th>Non-Profit Organization</th>
+      <th>Focus</th>
+      <th>Location</th>
+      <th>View Site</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @organizations.each do |organization| %>
+    <tr>
+      <td><%= organization.name %></td>
+      <td><%= organization.issue_type %></td>
+      <td><%= organization.location %></td>
+      <td><a href="<%= organization.website %>" class="waves-effect waves-light btn"><i class="material-icons">visibility</i></a><div class="box"><iframe src="<%= organization.website %>" width = "500px" height = "500px"></iframe></div></td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
+</p>

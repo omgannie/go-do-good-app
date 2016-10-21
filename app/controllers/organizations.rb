@@ -1,8 +1,15 @@
 get '/organizations' do
-  current_location = # need to communicate with API
-  @organizations = Organization.where(zip: current_location.zip)
+  @organizations = Organization.all
 
   erb :'/organizations/show'
+end
+
+get '/organizations/new' do
+  erb :'/organizations/new'
+end
+
+get '/organizations/video' do
+  erb :'/organizations/video'
 end
 
 post '/organizations' do

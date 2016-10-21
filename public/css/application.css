@@ -32,3 +32,20 @@ body {
 .btn {
   border-radius: 25px;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+ }
+
+ .box{
+    display: none;
+    width: 100%;
+    transition: 0.3s all ease-in;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
