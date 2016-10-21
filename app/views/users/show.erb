@@ -1,0 +1,8 @@
+<% if logged_in? %>
+  <h1>Hey, <%= @user.username %></h1>
+  <p>
+    Check out the menu to get started.
+  </p>
+<% else %>
+  <h1>You're not signed in. Why not sign up for an account?</h1>
+<% end %>

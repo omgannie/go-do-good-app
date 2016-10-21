@@ -1,0 +1,33 @@
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <div class="error"><%= error %></div>
+  <% end %>
+<% end %>
+
+<h1>Add An Organization</h1>
+
+<p>
+  <b>Disclaimer:</b> Your organization will be added right away. However, should it prove to be a false or fraudulent organization, administration will take it down.
+</p>
+
+<form action="/organizations" method="post">
+  <label>Organization Name</label><br>
+  <input type="text" name="organization[name]" placeholder="e.g. 'Red Cross'"><br>
+
+  <label>Issue Type</label><br>
+  <input type="text" name="organization[issue_type]" placeholder="e.g. 'Civil Rights'"><br>
+
+  <label>Address</label><BR>
+  <input type="text" name="organization[address]" placeholder="e.g. '1234 Charity Road Suite 500'"><br>
+
+  <label>City</label><br>
+  <input type="text" name="organization[city]" placeholder="e.g. 'Chicago'"><br>
+
+  <label>State</label><BR>
+  <input type="text" name="organization[state]" placeholder="e.g. 'Illinois'"><br>
+
+  <label>ZIP code</label><br>
+  <input type="text" name="organization[zip]" placeholder="e.g. '60606'"><br>
+
+  <input type="submit" value="Submit New Organization">
+</form>

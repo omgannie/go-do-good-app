@@ -6,6 +6,7 @@ class Organization < ActiveRecord::Base
   validates :name, :address, uniqueness: true
 
   def location
-    "#{self.address}\n#{self.city}, #{self.state} #{self.zip}"
+    "#{self.address}"
+    "#{self.city}, #{self.state} #{self.zip}"
   end
 end

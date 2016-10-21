@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>goDOgood</title>
     <link rel="stylesheet" href="/css/normalize.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="/css/application.css" media="screen">
   </head>
   <body>
     <div class="nav-wrapper">
-      <nav>
+      <nav class="purple lighten-2">
         <a href="/" class="logo-link">goDOgood</a>
 
         <ul class="nested nav">
@@ -16,12 +17,12 @@
           <li><a href="/">Home</a></li>
           <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
           <li><input type="hidden" name="_method" value="delete">
-          <input type="submit" class="logout small-btn" value="Logout"></li>
+          <input type="submit" class="waves-effect waves-light btn yellow darken-4" value="Logout"></li>
           <% else %>
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/users/new" class="new small-btn">Sign Up</a></li>
-          <li><a href="/login" class="login small-btn">Login</a></li>
+          <li><a href="/users/new" class="waves-effect waves-light btn">Sign Up</a></li>
+          <li><a href="/login" class="waves-effect waves-light btn">Login</a></li>
           <% end %>
         </ul>
       </nav>
@@ -30,4 +31,5 @@
       <%= yield %>
     </div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </html>
