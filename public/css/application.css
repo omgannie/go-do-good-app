@@ -32,3 +32,8 @@ body {
 .btn {
   border-radius: 25px;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+ }

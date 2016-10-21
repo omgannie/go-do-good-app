@@ -1,17 +1,5 @@
-<% if @organization %>
-  <h1><%= @organization.name %></h1>
 
-  <div class="org-desc">
-    <p>
-      <%= @organization.location %>
-    </p>
-  </div>
-<% else %>
-  <h1>Sorry, this organization is not currently in our system!</h1>
-  <p>
-    Why not try adding it yourself?
-  </p>
-  <form class="add main-btn" action="/organizations" method="get">
-    <input type="submit" value="Add New Organization">
-  </form>
-<% end %>
+<h3>Find Places to DOgood</h3>
+<div id="map">
+  <script src="/js/dbcgmaps.js"></script>
+</div>
