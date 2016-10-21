@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 var map;
 var infoWindow;
 var service;
@@ -64,6 +62,3 @@ function addMarker(place) {
     });
   });
 }
-
-=======
->>>>>>> 5fc3d5e171410787c542f8ebab7c46ddcc4db385

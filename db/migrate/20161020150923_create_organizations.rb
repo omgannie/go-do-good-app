@@ -7,6 +7,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.integer :zip
+      t.string :website
 
       t.timestamps(null:false)
     end
