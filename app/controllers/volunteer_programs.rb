@@ -1,5 +1,5 @@
 get '/volunteer_programs' do
-  @all_programs = VolunteerProgram.all
+  @nearby_programs = VolunteerProgram.where(zip: Organization.location)
 
   erb :'/volunteer_programs/index'
 end

@@ -29,50 +29,6 @@ body {
   font-size: 1em;
 }
 
-.small-btn {
-  width: 150px;
-  border-radius: 10px;
-  border: 2px solid #F5E3E0;
-  color: #F5E3E0;
-  text-align: center;
-  font-size: 14px;
-  background-color: transparent;
-  transition: 0.3s all ease-in;
-}
-
-.small-btn:hover {
-  color: #8A4F7D;
-  background-color: #F5E3E0;
-  border: 0;
-}
-
-.logout {
-  color: red;
-}
-
-.new {
-  color: #06A77D;
-}
-
-.main-btn {
-  width: 80%;
-  font-size: 2em;
-  padding: 10px;
-  margin: 0 auto;
-  background-color: #393D5E;
-  transition: 0.3s all ease-in;
-  border-radius: 20px;
-  color: #F5E3E0;
-  text-align: center;
-  border: 0;
-  margin-bottom: 20px;
-}
-
-.main-btn:hover {
-  opacity: 0.8;
-}
-
-.add {
-  color: white;
-  background-color: #06A77D;
+.btn {
+  border-radius: 25px;
 }
